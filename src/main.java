@@ -1,4 +1,3 @@
-
 import javax.swing.JFrame;
 
 public class main {
@@ -19,4 +18,3 @@ public class main {
         window.setVisible(true);
     }
 }
-
