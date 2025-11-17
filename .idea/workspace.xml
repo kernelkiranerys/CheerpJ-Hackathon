@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/entities/armours/Armour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/jbox2d_library.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gameLogic/ArmourSelector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CheerpJ-Hackathon.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CheerpJ-Hackathon.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +49,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.main.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "SK",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.19770116",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\magda\IdeaProjects\CheerpJ-Hackathon\assets\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -77,6 +93,7 @@
       <updated>1763327269833</updated>
       <workItem from="1763327271149" duration="144000" />
       <workItem from="1763327430258" duration="5845000" />
+      <workItem from="1763380034337" duration="3401000" />
     </task>
     <servers />
   </component>
