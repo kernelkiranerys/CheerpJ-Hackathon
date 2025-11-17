@@ -12,7 +12,7 @@ public abstract class Armour {
         this.name = name;
         this.weight = weight;
         this.dragCoefficient = dragCoefficient;
-        this.isEquipped = false;  // defaults to unequipped
+        this.isEquipped = false;
     }
 
     /**
