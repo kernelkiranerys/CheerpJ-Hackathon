@@ -30,7 +30,7 @@ public class ArmourSelector {
      */
     public Armour selectArmour(int choiceIndex) {
         if (choiceIndex >= 0 && choiceIndex < availableArmours.length) {
-            return availableArmours[choiceIndex - 1];
+            return availableArmours[choiceIndex];
         }
         else {
             throw new IllegalArgumentException("Invalid armour choice: " + choiceIndex);
