@@ -3,6 +3,10 @@ import entities.armours.Armour;
 
 import java.text.*;
 
+/**
+ * TODO: Refactor error handling to display errors in the game UI instead of throwing to console
+ * TODO: When an armour is selected, update the squirrel's armour accordingly
+ */
 public class ArmourSelector {
     private Armour[] availableArmours = new Armour[5];
 
