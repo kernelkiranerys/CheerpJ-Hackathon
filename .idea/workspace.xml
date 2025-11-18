@@ -4,30 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="Added JavaDoc to classes">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_cyborg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_knight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_mech.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_skeletal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_skinned.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/res/squirrel_sky_dive.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilotDiffState.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/entities/Parachute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathon/GamePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathon/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/GamePanel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/KeyHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/KeyHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +39,6 @@
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="35Zp63H1rFaho6mwnAT0peyKqxM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -74,6 +52,7 @@
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -98,9 +77,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\magda\IdeaProjects\CheerpJ-Hackathon\assets\images" />
     </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="main" />
-    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -113,6 +97,9 @@
       <workItem from="1763327271149" duration="144000" />
       <workItem from="1763327430258" duration="5845000" />
       <workItem from="1763380034337" duration="7322000" />
+      <workItem from="1763417496166" duration="7326000" />
+      <workItem from="1763468816564" duration="4549000" />
+      <workItem from="1763474051544" duration="1854000" />
     </task>
     <task id="LOCAL-00001" summary="Added JavaDoc to classes">
       <option name="closed" value="true" />
