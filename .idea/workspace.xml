@@ -5,8 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CheerpJ-Hackathon.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/KeyHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_cyborg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_knight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_mech.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_skeletal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_skinned.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/res/squirrel_sky_dive.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/Armour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/Armour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathon/GamePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathon/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/GamePanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/KeyHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CheerpJ-Hackathonv2/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GamePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/KeyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/KeyHandlerDeprecated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Squirrel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,30 +55,32 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kernelkiranerys/CheerpJ-Hackathon.git&quot;,
-    &quot;accountId&quot;: &quot;d732d818-8bbc-41c3-80c0-3e5d84d3c962&quot;
+    &quot;accountId&quot;: &quot;4a7bade8-bf6b-4607-9cb7-a004c703b08a&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
   <component name="ProjectId" id="35Zp63H1rFaho6mwnAT0peyKqxM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Application.main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "true",
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "SK",
+    "git-widget-placeholder": "Merging main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/JCB/IdeaProjects/CheerpJ-Hackathonv2/src/res",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +94,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/res" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\magda\IdeaProjects\CheerpJ-Hackathon\assets\images" />
     </key>
@@ -76,8 +104,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.39" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.39" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.27397.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.27397.103" />
       </set>
     </attachedChunks>
   </component>
@@ -92,11 +120,28 @@
       <workItem from="1763327271149" duration="144000" />
       <workItem from="1763327430258" duration="5845000" />
       <workItem from="1763380034337" duration="7322000" />
+      <workItem from="1763417496166" duration="7326000" />
+      <workItem from="1763468816564" duration="4549000" />
+      <workItem from="1763474051544" duration="1854000" />
     </task>
+    <task id="LOCAL-00001" summary="Added JavaDoc to classes">
+      <option name="closed" value="true" />
+      <created>1763420374747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763420374747</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added sprite render and key listener" />
+    <MESSAGE value="Added JavaDoc to classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JavaDoc to classes" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

@@ -1,15 +1,16 @@
+/*
 import entities.Parachute;
 import entities.Squirrel;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class KeyHandler implements KeyListener {
+public class KeyHandlerDeprecated implements KeyListener {
     private Squirrel squirrel;
 
 
 
-    public KeyHandler(Squirrel squirrel) {
+    public KeyHandlerDeprecated(Squirrel squirrel) {
         this.squirrel = squirrel;
     }
 
@@ -33,3 +34,4 @@ public class KeyHandler implements KeyListener {
 
     }
 }
+*/
