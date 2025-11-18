@@ -45,7 +45,7 @@ public class Player extends Entity {
             movePlayerRight();
         }
         if(keyH.pPressed == true){
-            if (parachute == null){
+            if (parachute != null && !parachute.isDeployed()){
                 parachute.deploy();
             }
         }

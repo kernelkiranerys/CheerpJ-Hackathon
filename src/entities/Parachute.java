@@ -10,7 +10,7 @@ package entities;
  * </p>
  */
 public class Parachute {
-    private boolean deployed;
+    private boolean deployed = false;
     private float dragFactor;
 
 
