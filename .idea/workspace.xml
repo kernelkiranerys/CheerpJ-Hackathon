@@ -32,7 +32,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/kernelkiranerys/CheerpJ-Hackathon.git&quot;,
-    &quot;accountId&quot;: &quot;d732d818-8bbc-41c3-80c0-3e5d84d3c962&quot;
+    &quot;accountId&quot;: &quot;4a7bade8-bf6b-4607-9cb7-a004c703b08a&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -45,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Application.main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
@@ -54,8 +55,9 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "SK",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/JCB/IdeaProjects/CheerpJ-Hackathonv2/src/res",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,6 +71,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/res" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\magda\IdeaProjects\CheerpJ-Hackathon\assets\images" />
     </key>
@@ -96,10 +101,24 @@
       <workItem from="1763468816564" duration="4549000" />
       <workItem from="1763474051544" duration="1854000" />
     </task>
+    <task id="LOCAL-00001" summary="Added JavaDoc to classes">
+      <option name="closed" value="true" />
+      <created>1763420374747</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1763420374747</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added sprite render and key listener" />
+    <MESSAGE value="Added JavaDoc to classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added JavaDoc to classes" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
