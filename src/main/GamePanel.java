@@ -1,8 +1,12 @@
+package main;
+
+import entities.Player;
+
 import javax.swing.*;
 import java.awt.*;
 
 /**
- * Primary game drawing surface and main loop controller.
+ * Primary game drawing surface and main.main loop controller.
  *
  * <p>This JPanel subclass owns the game's timing thread and is responsible for:
  * - maintaining tile and screen size constants used by the renderer,
@@ -28,7 +32,7 @@ public class GamePanel extends JPanel implements Runnable {
     /**
      * Size of one tile in pixels after scaling (originalTileSize * scale).
      */
-    final int tileSize = originalTileSize * scale;
+    public final int tileSize = originalTileSize * scale;
 
     /**
      * Number of horizontal tiles visible on the screen.
@@ -51,19 +55,32 @@ public class GamePanel extends JPanel implements Runnable {
     final int screenHeight = tileSize * maxScreenRow;
 
     /**
-     * Thread that runs the main game loop. Null when not running.
+     * Thread that runs the main.main game loop. Null when not running.
      */
-    Thread gameThread;
 
+    //FPS
+    int FPS = 60;
+
+
+    KeyHandler keyH = new KeyHandler();
+    Thread gameThread;
+    Player player = new Player(this, keyH);
+
+    //set player default position
+    int playerX = 100;
+    int playerY = 100;
+    int playerSpeed = 4;
 
     /**
-     * Construct a GamePanel configured for the calculated screen size and
+     * Construct a main.main.GamePanel configured for the calculated screen size and
      * basic double buffering. The background is initialized to blue.
      */
     public GamePanel() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
         this.setBackground(Color.blue);
         this.setDoubleBuffered(true);
+        this.addKeyListener(keyH);
+        this.setFocusable(true);
     }
 
     /**
@@ -85,12 +102,33 @@ public class GamePanel extends JPanel implements Runnable {
      */
     @Override
     public void run() {
+        double drawInterval = 1000000000/FPS;
+        double nextDrawTime = System.nanoTime() + drawInterval;
         while(gameThread != null){
-            System.out.println("Running");
+
+            long currentTime = System.nanoTime();
+            System.out.println("Current Time: " + currentTime);
+
             // this loop will update data to rernder screen sprites and other game info
             update();
             // render
             repaint();
+
+
+            try {
+                double remainingTime = nextDrawTime - System.nanoTime();
+                if (remainingTime < 0){
+                    remainingTime = 0;
+                }
+
+                Thread.sleep((long)(remainingTime/1000000));
+
+                nextDrawTime += drawInterval;
+
+
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 
@@ -101,7 +139,7 @@ public class GamePanel extends JPanel implements Runnable {
      * such as moving sprites, processing input, and handling collisions.</p>
      */
     public void update(){
-
+        player.update();
     }
 
     /**
@@ -113,8 +151,7 @@ public class GamePanel extends JPanel implements Runnable {
         super.paintComponent(g);
 
         Graphics2D g2 = (Graphics2D)g;
-        g2.setColor(Color.white);
-        g2.fillRect(100, 100, tileSize, tileSize);
+        player.draw(g2);
         g2.dispose();
 
     }
