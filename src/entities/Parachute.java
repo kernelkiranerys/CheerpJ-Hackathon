@@ -63,7 +63,7 @@ public class Parachute {
     /**
      * Returns the parachute's drag factor.
      * <p>
-     * The drag factor is a float value representing how much drag the parachute
+     * The drag factor i+s a float value representing how much drag the parachute
      * applies (for example to reduce falling speed). It is not modified by the
      * class outside of construction in the current implementation.
      * </p>
