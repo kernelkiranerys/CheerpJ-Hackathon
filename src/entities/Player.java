@@ -33,16 +33,21 @@ public class Player extends Entity {
 
     public void update(){
         if(keyH.upPressed == true){
-            y -= speed;
+            movePlayerUp();
         }
-        else if(keyH.downPressed == true){
-            y += speed;
+        if(keyH.downPressed == true){
+            movePlayerDown();
         }
-        else if(keyH.leftPressed == true){
-            x -= speed;
+        if(keyH.leftPressed == true){
+            movePlayerLeft();
         }
-        else if(keyH.rightPressed == true){
-            x += speed;
+        if(keyH.rightPressed == true){
+            movePlayerRight();
+        }
+        if(keyH.pPressed == true){
+            if (parachute == null){
+                parachute.deploy();
+            }
         }
     }
     public void draw(Graphics2D g2){
@@ -60,5 +65,21 @@ public class Player extends Entity {
 
     public void unequipParachute(Parachute parachute) {
         this.parachute = null;
+    }
+
+    public void movePlayerLeft() {
+        x -= speed;
+    }
+
+    public void movePlayerRight() {
+        x += speed;
+    }
+
+    public void movePlayerUp() {
+        y -= speed;
+    }
+
+    public void movePlayerDown() {
+        y += speed;
     }
 }

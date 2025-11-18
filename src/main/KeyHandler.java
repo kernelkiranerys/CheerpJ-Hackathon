@@ -5,7 +5,7 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
 
-    public boolean upPressed, downPressed, leftPressed, rightPressed;
+    public boolean upPressed, downPressed, leftPressed, rightPressed, pPressed;
 
 
 
@@ -33,6 +33,10 @@ public class KeyHandler implements KeyListener {
         if (code == KeyEvent.VK_RIGHT) {
             System.out.println("Right key pressed");
             rightPressed = true;
+        }
+        if (code == KeyEvent.VK_P) {
+            System.out.println("P key pressed");
+            pPressed = true;
         }
 
 
