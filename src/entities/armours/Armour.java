@@ -6,6 +6,8 @@ public abstract class Armour {
     private double weight;
     private double dragCoefficient;
     private boolean isEquipped;
+    private String spritePathGlide;
+    private String spritePathDive;
 
 
     public Armour(String name, double weight, double dragCoefficient) {

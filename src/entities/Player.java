@@ -5,6 +5,7 @@ import main.GamePanel;
 import main.KeyHandler;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 public class Player extends Entity {
     GamePanel gp;
@@ -17,6 +18,7 @@ public class Player extends Entity {
         this.keyH = keyH;
 
         setDefaultValues();
+        getPlayerImage();
     }
     public void setDefaultValues(){
         x = 100;
@@ -26,7 +28,11 @@ public class Player extends Entity {
 
     public void getPlayerImage(){
         try{
-            up = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/res/squirrel.png"));
+            up = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_knight.png"));
+            down = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_mech.png"));
+            left = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_skeletal.png"));
+            right = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_sky_dive.png"));
+
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -35,15 +41,19 @@ public class Player extends Entity {
 
     public void update(){
         if(keyH.upPressed == true){
+            direction = "up";
             movePlayerUp();
         }
         if(keyH.downPressed == true){
+            direction = "down";
             movePlayerDown();
         }
         if(keyH.leftPressed == true){
+            direction = "left";
             movePlayerLeft();
         }
         if(keyH.rightPressed == true){
+            direction = "right";
             movePlayerRight();
         }
         if(keyH.pPressed == true){
@@ -53,8 +63,25 @@ public class Player extends Entity {
         }
     }
     public void draw(Graphics2D g2){
-        g2.setColor(java.awt.Color.white);
-        g2.fillRect(x, y, gp.tileSize, gp.tileSize);
+        //g2.setColor(java.awt.Color.white);
+        //g2.fillRect(x, y, gp.tileSize, gp.tileSize);
+
+        BufferedImage image = null;
+        switch (direction) {
+            case "up":
+                image = up;
+                break;
+            case "down":
+                image = down;
+                break;
+            case "left":
+                image = left;
+                break;
+            case "right":
+                image = right;
+                break;
+        }
+        g2.drawImage(image, x, y, gp.tileSize * 2, gp.tileSize * 2, null);
     }
 
     public Parachute getParachute() {
