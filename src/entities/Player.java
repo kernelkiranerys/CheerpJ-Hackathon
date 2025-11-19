@@ -1,5 +1,6 @@
 package entities;
 
+import entities.armours.Armour;
 import main.GamePanel;
 import main.KeyHandler;
 
@@ -9,6 +10,7 @@ public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
     private Parachute parachute = null;
+    private Armour armour = null;
 
     public  Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -81,5 +83,13 @@ public class Player extends Entity {
 
     public void movePlayerDown() {
         y += speed;
+    }
+
+    public void setPlayerArmour(Armour armour){
+        this.armour = armour;
+    }
+
+    public Armour GetPlayerArmour(){
+        return this.armour;
     }
 }

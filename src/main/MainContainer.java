@@ -31,7 +31,7 @@ public class MainContainer extends JPanel {
         gamePanel = new GamePanel();
         EquationsPanel equationsPanel = new EquationsPanel();
 
-        ArmourPanel armourPanel = new ArmourPanel();
+        ArmourPanel armourPanel = new ArmourPanel(gamePanel.getPlayer());
 
         this.add(armourPanel, BorderLayout.WEST);
         this.add(gamePanel, BorderLayout.CENTER);

@@ -108,7 +108,7 @@ public class GamePanel extends JPanel implements Runnable {
         while(gameThread != null){
 
             long currentTime = System.nanoTime();
-            System.out.println("Current Time: " + currentTime);
+            //System.out.println("Current Time: " + currentTime);
 
             // this loop will update data to rernder screen sprites and other game info
             update();
@@ -155,5 +155,9 @@ public class GamePanel extends JPanel implements Runnable {
         player.draw(g2);
         g2.dispose();
 
+    }
+
+    public Player getPlayer(){
+        return player;
     }
 }
