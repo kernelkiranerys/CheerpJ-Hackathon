@@ -42,6 +42,12 @@ public class ArmourPanel extends JPanel {
         knightArmourButton.setActionCommand("KNIGHT_ARMOUR");
         skeletonArmourButton.setActionCommand("SKELETON_ARMOUR");
         skyDiveArmourButton.setActionCommand("SKYDIVE_ARMOUR");
+
+        mechArmourButton.setFocusable(false);
+        cyborgArmourButton.setFocusable(false);
+        knightArmourButton.setFocusable(false);
+        skeletonArmourButton.setFocusable(false);
+        skyDiveArmourButton.setFocusable(false);
     }
 
     /**
