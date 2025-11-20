@@ -3,7 +3,7 @@ package entities.armours;
 public class SkyDiveArmour extends Armour{
     public SkyDiveArmour() {
 
-        super("Sky Dive Armour", 10.0, 0.30, "/res/squirrel_sky_dive.png", "/res/squirrel_skinned.png");
+        super("Sky Dive Armour", 10.0, 0.30, "/images/squirrel_sky_dive.png", "/images/squirrel_sky_dive.png");
     }
 
     @Override

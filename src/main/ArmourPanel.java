@@ -78,6 +78,8 @@ public class ArmourPanel extends JPanel {
     private void selectArmour(Player player, int choice) {
         Armour selectedArmour = armourSelector.selectArmour(choice);
         player.setPlayerArmour(selectedArmour);
+        player.setPlayerDiveSpritePath(selectedArmour.getDiveSpritePath());
+        player.setPlayerGlideSpritePath(selectedArmour.getGlideSpritePath());
         System.out.println(player.GetPlayerArmour().getName() + " selected!");
     }
 }

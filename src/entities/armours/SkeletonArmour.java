@@ -3,7 +3,7 @@ package entities.armours;
 public class SkeletonArmour extends Armour {
     public SkeletonArmour() {
 
-        super("Skeleton Armour", 15.0, 0.50, "/res/squirrel_skeletal.png", "/res/squirrel_skinned.png");
+        super("Skeleton Armour", 15.0, 0.50, "/images/squirrel_skeletal.png", "/images/squirrel_skeletal.png");
     }
 
     @Override

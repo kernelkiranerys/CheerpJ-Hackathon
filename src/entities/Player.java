@@ -7,12 +7,15 @@ import main.KeyHandler;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.Objects;
 
 public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
     private Parachute parachute = null;
     private Armour armour = new SquirrelArmour();
+    private String playerGlideSpritePath = ((SquirrelArmour) armour).getGlideSpritePath();
+    private String playerDiveSpritePath  = ((SquirrelArmour) armour).getDiveSpritePath();
     private double playerWeight = 0.6;
     private double playerDragCoefficient = 1.0;
     private double playerFrontalArea = 0.025;
@@ -33,8 +36,8 @@ public class Player extends Entity {
 
     public void getPlayerImage(){
         try{
-            up = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_knight.png"));
-            down = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_mech.png"));
+            up = javax.imageio.ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream(getPlayerGlideSpritePath())));
+            down = javax.imageio.ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream(getPlayerDiveSpritePath())));
             left = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_skeletal.png"));
             right = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_sky_dive.png"));
 
@@ -118,6 +121,22 @@ public class Player extends Entity {
 
     public void setPlayerArmour(Armour armour){
         this.armour = armour;
+    }
+
+    public void setPlayerGlideSpritePath(String path){
+        this.playerGlideSpritePath = path;
+    }
+
+    public String getPlayerGlideSpritePath(){
+        return this.playerGlideSpritePath;
+    }
+
+    public void setPlayerDiveSpritePath(String path){
+        this.playerDiveSpritePath = path;
+    }
+
+    public String getPlayerDiveSpritePath() {
+        return this.playerDiveSpritePath;
     }
 
     public Armour GetPlayerArmour(){

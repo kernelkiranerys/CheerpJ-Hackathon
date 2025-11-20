@@ -6,7 +6,7 @@ public abstract class Armour {
     private double weight;
     private double dragCoefficient;
     private boolean isEquipped;
-    private String spritePathGlide;
+    public String spritePathGlide;
     private String spritePathDive;
 
 
@@ -75,6 +75,14 @@ public abstract class Armour {
      */
     public boolean isEquipped() {
         return isEquipped;
+    }
+
+    public String getDiveSpritePath() {
+        return spritePathDive;
+    }
+
+    public String getGlideSpritePath() {
+        return spritePathGlide;
     }
 }
 
