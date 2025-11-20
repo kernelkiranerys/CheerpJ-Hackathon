@@ -74,7 +74,7 @@ public class ArmourPanel extends JPanel {
 
     /**
      * Shared code to update player armour. Updates the player's armour
-     * and associated sprite paths based on the selected armour.
+     * and associated sprite paths based on the selected armour
      */
     private void selectArmour(Player player, int choice) {
         Armour selectedArmour = armourSelector.selectArmour(choice);
