@@ -24,6 +24,7 @@ public class Player extends Entity {
         x = 100;
         y = 100;
         speed = 4;
+        direction = "up";
     }
 
     public void getPlayerImage(){
@@ -42,18 +43,18 @@ public class Player extends Entity {
     public void update(){
         if(keyH.upPressed == true){
             direction = "up";
-            movePlayerUp();
+            //movePlayerUp();
         }
         if(keyH.downPressed == true){
             direction = "down";
-            movePlayerDown();
+            //movePlayerDown();
         }
         if(keyH.leftPressed == true){
-            direction = "left";
+            //direction = "left";
             movePlayerLeft();
         }
         if(keyH.rightPressed == true){
-            direction = "right";
+            //direction = "right";
             movePlayerRight();
         }
         if(keyH.pPressed == true){
@@ -74,14 +75,9 @@ public class Player extends Entity {
             case "down":
                 image = down;
                 break;
-            case "left":
-                image = left;
-                break;
-            case "right":
-                image = right;
-                break;
+
         }
-        g2.drawImage(image, x, y, gp.tileSize * 2, gp.tileSize * 2, null);
+        g2.drawImage(image, x, y, gp.tileSize * 4, gp.tileSize * 4, null);
     }
 
     public Parachute getParachute() {

@@ -2,19 +2,21 @@ package entities.armours;
 
 public abstract class Armour {
 
-    private String name;
-    private double weight;
-    private double dragCoefficient;
+    private final String name;
+    private final double weight;
+    private final double dragCoefficient;
     private boolean isEquipped;
-    private String spritePathGlide;
-    private String spritePathDive;
+    private final String spritePathGlide;
+    private final String spritePathDive;
 
 
-    public Armour(String name, double weight, double dragCoefficient) {
+    public Armour(String name, double weight, double dragCoefficient, String spritePathGlide, String spritePathDive) {
         this.name = name;
         this.weight = weight;
         this.dragCoefficient = dragCoefficient;
         this.isEquipped = false;
+        this.spritePathGlide = spritePathGlide;
+        this.spritePathDive = spritePathDive;
     }
 
     /**
@@ -73,5 +75,21 @@ public abstract class Armour {
      */
     public boolean isEquipped() {
         return isEquipped;
+    }
+
+    /**
+     * Returns the sprite path used when gliding.
+     * @return the glide sprite path
+     */
+    public String getSpritePathGlide() {
+        return spritePathGlide;
+    }
+
+    /**
+     * Returns the sprite path used when diving.
+     * @return the dive sprite path
+     */
+    public String getSpritePathDive() {
+        return spritePathDive;
     }
 }
