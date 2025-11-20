@@ -10,7 +10,7 @@ public abstract class Armour {
     private String spritePathDive;
 
 
-    public Armour(String name, double weight, double dragCoefficient) {
+    public Armour(String name, double weight, double dragCoefficient, String spritePathGlide, String spritePathDive) {
         this.name = name;
         this.weight = weight;
         this.dragCoefficient = dragCoefficient;
