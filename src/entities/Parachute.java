@@ -11,7 +11,8 @@ package entities;
  */
 public class Parachute {
     private boolean deployed = false;
-    private float dragFactor;
+    private float dragCoefficient = 1.5f;
+    private double parachuteFrontalArea = 0.25;
 
 
     /**
@@ -24,7 +25,7 @@ public class Parachute {
      */
     public Parachute() {
         this.deployed = false;
-        this.dragFactor = 0.5f;
+        this.dragCoefficient = 0.5f;
     }
 
     /**
@@ -71,6 +72,10 @@ public class Parachute {
      * @return the drag factor
      */
     public float getDragFactor() {
-        return dragFactor;
+        return dragCoefficient;
+    }
+
+    public double getParachuteFrontalArea() {
+        return parachuteFrontalArea;
     }
 }

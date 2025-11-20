@@ -1,6 +1,7 @@
 package entities;
 
 import entities.armours.Armour;
+import entities.armours.SquirrelArmour;
 import main.GamePanel;
 import main.KeyHandler;
 
@@ -11,7 +12,10 @@ public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
     private Parachute parachute = null;
-    private Armour armour = null;
+    private Armour armour = new SquirrelArmour();
+    private double playerWeight = 0.6;
+    private double playerDragCoefficient = 1.0;
+    private double playerFrontalArea = 0.025;
 
     public  Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -71,9 +75,13 @@ public class Player extends Entity {
         switch (direction) {
             case "up":
                 image = up;
+                playerDragCoefficient = 1.0;
+                playerFrontalArea = 0.04;
                 break;
             case "down":
                 image = down;
+                playerDragCoefficient = 0.5;
+                playerFrontalArea = 0.008;
                 break;
 
         }
@@ -114,5 +122,27 @@ public class Player extends Entity {
 
     public Armour GetPlayerArmour(){
         return this.armour;
+    }
+
+    public double getPlayerWeight(){
+        return this.armour.getWeight() + this.playerWeight;
+    }
+
+    public double getPlayerDragCoefficient(){
+        if(this.parachute != null && this.parachute.isDeployed()){
+            return this.parachute.getDragFactor() * this.playerDragCoefficient;
+        }
+        else {
+            return this.playerDragCoefficient;
+        }
+    }
+
+    public double getPlayerFrontalArea(){
+        if(this.parachute != null && this.parachute.isDeployed()){
+            return this.parachute.getParachuteFrontalArea() + this.playerFrontalArea;
+        }
+        else {
+            return this.playerFrontalArea;
+        }
     }
 }

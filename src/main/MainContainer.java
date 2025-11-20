@@ -29,7 +29,7 @@ public class MainContainer extends JPanel {
     MainContainer() {
         this.setLayout(new BorderLayout());
         gamePanel = new GamePanel();
-        EquationsPanel equationsPanel = new EquationsPanel();
+        EquationsPanel equationsPanel = new EquationsPanel(gamePanel.getPlayer());
 
         ArmourPanel armourPanel = new ArmourPanel(gamePanel.getPlayer());
 

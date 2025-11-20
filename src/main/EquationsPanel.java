@@ -1,5 +1,8 @@
 package main;
 
+import entities.Player;
+import gameLogic.EquationManager;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -9,15 +12,18 @@ import java.awt.*;
  * preferred size and a gray background color.
  */
 public class EquationsPanel extends JPanel {
-
+    private EquationManager equationsManager;
     /**
      * Creates an EquationsPanel configured with a preferred size and background.
      *
      * <p>This panel is intended to display equations or related UI on the side
      * of the main game area. Currently it sets a fixed preferred size and gray background.</p>
      */
-    EquationsPanel() {
+    EquationsPanel(Player player) {
         this.setPreferredSize((new Dimension(200, 100)));
         this.setBackground(Color.GRAY);
+        this.equationsManager = new EquationManager(player);
+        double terminalVelocity = equationsManager.getTerminalVelocity();
+        System.out.println("Terminal Velocity: " + terminalVelocity);
     }
 }
