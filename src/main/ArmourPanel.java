@@ -80,6 +80,7 @@ public class ArmourPanel extends JPanel {
         player.setPlayerArmour(selectedArmour);
         player.setPlayerDiveSpritePath(selectedArmour.getDiveSpritePath());
         player.setPlayerGlideSpritePath(selectedArmour.getGlideSpritePath());
+        player.getPlayerImage();
         System.out.println(player.GetPlayerArmour().getName() + " selected!");
     }
 }

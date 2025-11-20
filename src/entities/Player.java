@@ -14,8 +14,8 @@ public class Player extends Entity {
     KeyHandler keyH;
     private Parachute parachute = null;
     private Armour armour = new SquirrelArmour();
-    private String playerGlideSpritePath = ((SquirrelArmour) armour).getGlideSpritePath();
-    private String playerDiveSpritePath  = ((SquirrelArmour) armour).getDiveSpritePath();
+    private String playerGlideSpritePath = armour.getGlideSpritePath();
+    private String playerDiveSpritePath  = armour.getDiveSpritePath();
     private double playerWeight = 0.6;
     private double playerDragCoefficient = 1.0;
     private double playerFrontalArea = 0.025;
@@ -38,8 +38,8 @@ public class Player extends Entity {
         try{
             up = javax.imageio.ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream(getPlayerGlideSpritePath())));
             down = javax.imageio.ImageIO.read(Objects.requireNonNull(getClass().getResourceAsStream(getPlayerDiveSpritePath())));
-            left = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_skeletal.png"));
-            right = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_sky_dive.png"));
+            //left = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_skeletal.png"));
+            //right = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/squirrel_sky_dive.png"));
 
         }catch (Exception e){
             e.printStackTrace();

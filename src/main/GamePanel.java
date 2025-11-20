@@ -135,6 +135,7 @@ public class GamePanel extends JPanel implements Runnable {
      * such as moving sprites, processing input, and handling collisions.</p>
      */
     public void update(){
+
         player.update();
     }
 
@@ -149,8 +150,7 @@ public class GamePanel extends JPanel implements Runnable {
         Graphics2D g2 = (Graphics2D)g;
         player.draw(g2);
         g2.dispose();
-        System.out.println(player.getPlayerDiveSpritePath());
-        System.out.println(player.getPlayerGlideSpritePath());
+
 
     }
 
