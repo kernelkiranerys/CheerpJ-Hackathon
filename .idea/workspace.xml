@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="Added test render functionality to direction control">
+    <list default="true" id="6e5d313c-e661-4f03-be4c-de0e48606c68" name="Changes" comment="refined render functionality to include file path from armour class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entities/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/Armour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/Armour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/CyborgArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/CyborgArmour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/KnightArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/KnightArmour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/MechArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/MechArmour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/SkeletonArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/SkeletonArmour.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/armours/SkyDiveArmour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/armours/SkyDiveArmour.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +35,9 @@
     &quot;accountId&quot;: &quot;4a7bade8-bf6b-4607-9cb7-a004c703b08a&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -60,7 +57,6 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/JCB/IdeaProjects/CheerpJ-Hackathonv2/src/res",
@@ -115,7 +111,15 @@
       <option name="project" value="LOCAL" />
       <updated>1763588650295</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="refined render functionality to include file path from armour class">
+      <option name="closed" value="true" />
+      <created>1763659237883</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1763659237883</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,7 +129,8 @@
     <MESSAGE value="Added sprite render and key listener" />
     <MESSAGE value="Added JavaDoc to classes" />
     <MESSAGE value="Added test render functionality to direction control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added test render functionality to direction control" />
+    <MESSAGE value="refined render functionality to include file path from armour class" />
+    <option name="LAST_COMMIT_MESSAGE" value="refined render functionality to include file path from armour class" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
