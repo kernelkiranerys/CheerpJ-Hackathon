@@ -3,6 +3,7 @@ package main;
 import entities.Player;
 import entities.armours.Armour;
 import gameLogic.ArmourSelector;
+import gameLogic.EquationManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -23,11 +24,13 @@ public class ArmourPanel extends JPanel {
 
     private ArmourSelector armourSelector;
 
-    public ArmourPanel(Player player) {
+    private EquationsPanel equationsPanel;
+
+    public ArmourPanel(Player player, EquationsPanel equationsPanel) {
         armourSelector = new ArmourSelector();
         setPreferredSize(new Dimension(200, 100));
         setBackground(Color.GRAY);
-
+        this.equationsPanel = equationsPanel;
         setupActionCommands();
         setupButtonListeners(player);
         addArmourButtons();
@@ -79,6 +82,7 @@ public class ArmourPanel extends JPanel {
     private void selectArmour(Player player, int choice) {
         Armour selectedArmour = armourSelector.selectArmour(choice);
         player.setPlayerArmour(selectedArmour);
+        equationsPanel.refresh();
         player.setPlayerDiveSpritePath(selectedArmour.getDiveSpritePath());
         player.setPlayerGlideSpritePath(selectedArmour.getGlideSpritePath());
         player.getPlayerImage();
