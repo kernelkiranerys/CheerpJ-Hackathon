@@ -14,6 +14,7 @@ import java.awt.*;
 public class EquationsPanel extends JPanel {
     private EquationManager equationsManager;
     private Player player;
+    private Timer refreshTimer;
 
     /**
      * Creates an EquationsPanel configured with a preferred size and background.
@@ -28,6 +29,10 @@ public class EquationsPanel extends JPanel {
         this.equationsManager = new EquationManager(player);
         double terminalVelocity = equationsManager.getTerminalVelocity();
         System.out.println("Terminal Velocity: " + terminalVelocity);
+
+        // repaint ~10 times per second (adjust delay as needed)
+        refreshTimer = new Timer(100, e -> repaint());
+        refreshTimer.start();
     }
 
     @Override
