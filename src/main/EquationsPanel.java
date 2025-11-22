@@ -30,7 +30,7 @@ public class EquationsPanel extends JPanel {
         double terminalVelocity = equationsManager.getTerminalVelocity();
         System.out.println("Terminal Velocity: " + terminalVelocity);
 
-        // repaint ~10 times per second (adjust delay as needed)
+
         refreshTimer = new Timer(100, e -> repaint());
         refreshTimer.start();
     }
