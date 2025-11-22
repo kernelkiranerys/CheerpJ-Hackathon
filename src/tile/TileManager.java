@@ -13,7 +13,7 @@ public class TileManager {
         tile = new Tile[10];
         getTileImage();
     }
-
+    // add other tile types as needed
     public void getTileImage() {
 
         try {
