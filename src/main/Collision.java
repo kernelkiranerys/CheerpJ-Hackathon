@@ -4,6 +4,9 @@ package main;
 import entities.Entity;
 
 public class Collision {
+
+    private final int GROUND_TILE_INDEX = 2;
+
     GamePanel gp;
     public Collision(GamePanel gp) {
         this.gp = gp;
@@ -28,6 +31,11 @@ public class Collision {
                 tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityTopRow];
                 if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                     entity.collisionOn = true;
+
+                    if (tileNum1 == GROUND_TILE_INDEX || tileNum2 == GROUND_TILE_INDEX && !gp.tileM.endGameTriggered) {
+                        gp.tileM.endGameTriggered = true;
+                        gp.tileM.loadMap("/maps/end_game_3.txt");
+                    }
                 }
                 break;
             case "down":
@@ -36,6 +44,11 @@ public class Collision {
                 tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];
                 if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                     entity.collisionOn = true;
+
+                    if (tileNum1 == GROUND_TILE_INDEX || tileNum2 == GROUND_TILE_INDEX && !gp.tileM.endGameTriggered) {
+                        gp.tileM.endGameTriggered = true;
+                        gp.tileM.loadMap("/maps/end_game_3.txt");
+                    }
                 }
                 break;
             case "left":
@@ -44,6 +57,11 @@ public class Collision {
                 tileNum2 = gp.tileM.mapTileNum[entityLeftCol][entityBottomRow];
                 if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                     entity.collisionOn = true;
+
+                    if (tileNum1 == GROUND_TILE_INDEX || tileNum2 == GROUND_TILE_INDEX && !gp.tileM.endGameTriggered) {
+                        gp.tileM.endGameTriggered = true;
+                        gp.tileM.loadMap("/maps/end_game_3.txt");
+                    }
                 }
                 break;
             case "right":
@@ -52,6 +70,11 @@ public class Collision {
                 tileNum2 = gp.tileM.mapTileNum[entityRightCol][entityBottomRow];
                 if (gp.tileM.tile[tileNum1].collision || gp.tileM.tile[tileNum2].collision) {
                     entity.collisionOn = true;
+
+                    if (tileNum1 == GROUND_TILE_INDEX || tileNum2 == GROUND_TILE_INDEX && !gp.tileM.endGameTriggered) {
+                        gp.tileM.endGameTriggered = true;
+                        gp.tileM.loadMap("/maps/end_game_3.txt");
+                    }
                 }
                 break;
         }

@@ -13,6 +13,7 @@ public class TileManager {
     GamePanel gp;
     public Tile[] tile;
     public int mapTileNum[][];
+    public boolean endGameTriggered = false;
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
@@ -41,10 +42,10 @@ public class TileManager {
             tile[3] = new Tile();
             tile[3].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/tiles/sky_blue.png"));
             tile[3].collision = true;
-            /*
+
             tile[4] = new Tile();
-            tile[4].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
-            */
+            tile[4].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/earth_brown.png"));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
