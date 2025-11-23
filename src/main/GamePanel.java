@@ -59,13 +59,20 @@ public class GamePanel extends JPanel implements Runnable {
      * Thread that runs the main.main game loop. Null when not running.
      */
 
+    //WORLD SETTINGS
+    public int maxWorldCol = 29;
+    public int maxWorldRow = 51;
+    public int worldWidth = tileSize * maxWorldCol;
+    public int worldHeight = tileSize * maxWorldRow;
+
+
     //FPS
     int FPS = 60;
 
     TileManager tileM = new TileManager(this);
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
-    Player player = new Player(this, keyH);
+    public Player  player = new Player(this, keyH);
 
 
     //set player default position

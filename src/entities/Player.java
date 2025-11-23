@@ -12,6 +12,8 @@ import java.util.Objects;
 public class Player extends Entity {
     GamePanel gp;
     KeyHandler keyH;
+    public final int screenX;
+    public final int screenY;
     private Parachute parachute = null;
     private Armour armour = new SquirrelArmour();
     private String playerGlideSpritePath = armour.getGlideSpritePath();
@@ -23,13 +25,14 @@ public class Player extends Entity {
     public  Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
         this.keyH = keyH;
-
+        screenX = gp.screenWidth / 2 - (gp.tileSize * 2);
+        screenY = gp.screenHeight / 2 - (gp.tileSize * 2);
         setDefaultValues();
         getPlayerImage();
     }
     public void setDefaultValues(){
-        x = 100;
-        y = 100;
+        worldX = gp.tileSize * 14;
+        worldY = gp.tileSize * 3;
         speed = 4;
         direction = "up";
     }
@@ -50,10 +53,12 @@ public class Player extends Entity {
     public void update(){
         if(keyH.upPressed == true){
             direction = "up";
+            movePlayerUp();
 
         }
         if(keyH.downPressed == true){
             direction = "down";
+            movePlayerDown();
 
         }
         if(keyH.leftPressed == true){
@@ -88,7 +93,7 @@ public class Player extends Entity {
                 break;
 
         }
-        g2.drawImage(image, x, y, gp.tileSize * 4, gp.tileSize * 4, null);
+        g2.drawImage(image, screenX, screenY, gp.tileSize * 4, gp.tileSize * 4, null);
     }
 
     public Parachute getParachute() {
@@ -104,19 +109,19 @@ public class Player extends Entity {
     }
 
     public void movePlayerLeft() {
-        x -= speed;
+        worldX -= speed;
     }
 
     public void movePlayerRight() {
-        x += speed;
+        worldX += speed;
     }
 
     public void movePlayerUp() {
-        y -= speed;
+        worldY -= speed;
     }
 
     public void movePlayerDown() {
-        y += speed;
+        worldY += speed;
     }
 
     public void setPlayerArmour(Armour armour){
