@@ -8,8 +8,8 @@ import java.io.InputStream;
 
 public class TileManager {
     GamePanel gp;
-    Tile[] tile;
-    int mapTileNum[][];
+    public Tile[] tile;
+    public int mapTileNum[][];
 
     public TileManager(GamePanel gp) {
         this.gp = gp;
@@ -32,12 +32,13 @@ public class TileManager {
 
             tile[2] = new Tile();
             tile[2].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/tiles/grass_green.png"));
+            tile[2].collision = true;
             System.out.println("Loaded tile[2]: " + (tile[2].image != null ? "SUCCESS" : "FAILED"));
-            /*
-            tile[3] = new Tile();
-            tile[3].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
-            tile[3].collision = true;
 
+            tile[3] = new Tile();
+            tile[3].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/tiles/sky_blue.png"));
+            tile[3].collision = true;
+            /*
             tile[4] = new Tile();
             tile[4].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/sand.png"));
             */
@@ -90,6 +91,12 @@ public class TileManager {
             int worldY = worldRow * gp.tileSize;
             int screenX = wordlX - gp.player.worldX + gp.player.screenX;
             int screenY = worldY - gp.player.worldY + gp.player.screenY;
+
+
+            //TODO: improve drawing efficiency by only drawing tiles within the visible screen area
+
+
+
 
             g2.drawImage(tile[tileNum].image, screenX, screenY, gp.tileSize, gp.tileSize, null);
             worldCol++;
