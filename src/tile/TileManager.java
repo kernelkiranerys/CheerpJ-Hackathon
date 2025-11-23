@@ -16,7 +16,7 @@ public class TileManager {
         tile = new Tile[10];
         mapTileNum = new int[gp.maxScreenCol][gp.maxScreenRow];
         getTileImage();
-        loadMap("/maps/tile_map_1.txt");
+        loadMap("/maps/tile_map_2.txt");
     }
     // add other tile types as needed
     public void getTileImage() {
@@ -28,10 +28,10 @@ public class TileManager {
             tile[1] = new Tile();
             tile[1].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/tiles/bark_brown.png"));
 
-            /*
-            tile[2] = new Tile();
-            tile[2].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/earth.png"));
 
+            tile[2] = new Tile();
+            tile[2].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/images/tiles/grass_green.png"));
+            /*
             tile[3] = new Tile();
             tile[3].image = javax.imageio.ImageIO.read(getClass().getResourceAsStream("/tiles/tree.png"));
             tile[3].collision = true;
@@ -46,7 +46,7 @@ public class TileManager {
 
     public void loadMap(String filePath){
         try {
-           InputStream is = getClass().getResourceAsStream();
+           InputStream is = getClass().getResourceAsStream(filePath);
            BufferedReader br = new BufferedReader(new java.io.InputStreamReader(is));
               int col = 0;
               int row = 0;
