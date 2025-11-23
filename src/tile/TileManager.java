@@ -16,7 +16,7 @@ public class TileManager {
         tile = new Tile[10];
         mapTileNum = new int[gp.maxScreenCol][gp.maxScreenRow];
         getTileImage();
-        loadMap();
+        loadMap("/maps/tile_map_1.txt");
     }
     // add other tile types as needed
     public void getTileImage() {
@@ -44,9 +44,9 @@ public class TileManager {
         }
     }
 
-    public void loadMap(){
+    public void loadMap(String filePath){
         try {
-           InputStream is = getClass().getResourceAsStream("/maps/tile_map_1.txt");
+           InputStream is = getClass().getResourceAsStream();
            BufferedReader br = new BufferedReader(new java.io.InputStreamReader(is));
               int col = 0;
               int row = 0;
