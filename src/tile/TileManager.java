@@ -6,6 +6,9 @@ import java.awt.*;
 import java.io.BufferedReader;
 import java.io.InputStream;
 
+//16 left to right
+//12 top to bottom
+
 public class TileManager {
     GamePanel gp;
     public Tile[] tile;
