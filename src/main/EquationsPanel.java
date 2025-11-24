@@ -47,11 +47,13 @@ public class EquationsPanel extends JPanel {
         double playerWeight = player.getPlayerWeight();
         double dragCoefficient = player.getPlayerDragCoefficient();
         double frontalArea = player.getPlayerFrontalArea();
+        double currentVelocity = equationsManager.updateVelocity();
 
         g2d.drawString("Terminal Velocity: " + String.format("%.2f", terminalVelocity), 10, 30);
         g2d.drawString("Weight: " + String.format("%.2f", playerWeight), 10, 50);
         g2d.drawString("Drag Coefficient: " + String.format("%.2f", dragCoefficient), 10, 70);
         g2d.drawString("Frontal Area: " + String.format("%.2f", frontalArea), 10, 90);
+        g2d.drawString("Current Velocity: " + String.format("%.2f", currentVelocity), 10, 110);
     }
 
     public void refresh() {
