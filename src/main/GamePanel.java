@@ -59,6 +59,8 @@ public class GamePanel extends JPanel implements Runnable {
      * Thread that runs the main.main game loop. Null when not running.
      */
 
+    public double pixelsPerMeter = 48;
+
     //WORLD SETTINGS
     public int maxWorldCol = 29;
     public int maxWorldRow = 51;

@@ -22,6 +22,13 @@ public class Player extends Entity {
     private double playerDragCoefficient = 1.0;
     private double playerFrontalArea = 0.025;
 
+    private double velocityY = 0.0;
+    private double gravity = 9.81;
+    private double deltaTime = 0.016;
+    private double airDensity = 1.225;
+
+    private boolean moving = false;
+
     public  Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
         this.keyH = keyH;
@@ -58,7 +65,6 @@ public class Player extends Entity {
 
 
     public void update(){
-        boolean moving = false;
 
         if(keyH.upPressed == true){
             direction = "up";
@@ -76,6 +82,7 @@ public class Player extends Entity {
             direction = "right";
             moving = true;
         }
+        physicsUpdate();
 
         if(keyH.pPressed == true){
             if (parachute != null && !parachute.isDeployed()){
@@ -109,7 +116,7 @@ public class Player extends Entity {
     }
     public void draw(Graphics2D g2){
         //g2.setColor(java.awt.Color.white);
-        //g2.fillRect(x, y, gp.tileSize, gp.tileSize);
+        //g2.fillRect(x, y, gp.tileSize, gp.tileSize);a
 
         BufferedImage image = null;
         switch (direction) {
@@ -125,13 +132,9 @@ public class Player extends Entity {
                 break;
             case "left":
                 image = left;
-                playerDragCoefficient = 1.0;
-                playerFrontalArea = 0.04;
                 break;
             case "right":
                 image = right;
-                playerDragCoefficient = 1.0;
-                playerFrontalArea = 0.04;
                 break;
         }
         g2.drawImage(image, screenX, screenY, gp.tileSize * 4, gp.tileSize * 4, null);
@@ -167,6 +170,7 @@ public class Player extends Entity {
 
     public void setPlayerArmour(Armour armour){
         this.armour = armour;
+
     }
 
     public void setPlayerGlideSpritePath(String path){
@@ -209,5 +213,28 @@ public class Player extends Entity {
         else {
             return this.playerFrontalArea;
         }
+    }
+
+    public void physicsUpdate() {
+        double weight = getPlayerWeight();
+        double dragCoefficient = getPlayerDragCoefficient();
+        double frontalArea = getPlayerFrontalArea();
+
+        moving = true;
+
+
+
+        double drag = 0.5 * dragCoefficient * airDensity * frontalArea * velocityY * velocityY;
+
+        double acceleration = gravity - (drag / weight);
+
+        velocityY += acceleration * deltaTime;
+
+        double terminalVelocity = Math.sqrt((2 * weight * gravity) / (airDensity * dragCoefficient * frontalArea));
+        if (velocityY > terminalVelocity) {
+            velocityY = terminalVelocity;
+        }
+
+        worldY += velocityY * deltaTime * gp.pixelsPerMeter;
     }
 }
