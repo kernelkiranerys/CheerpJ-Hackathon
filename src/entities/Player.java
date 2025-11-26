@@ -28,6 +28,7 @@ public class Player extends Entity {
     private double airDensity = 1.225;
 
     private boolean moving = false;
+    private boolean isFalling = false;
 
     public  Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
@@ -65,6 +66,9 @@ public class Player extends Entity {
 
 
     public void update(){
+        if(keyH.spacePressed && !isFalling){
+            isFalling = true;
+        }
 
         if(keyH.upPressed == true){
             direction = "up";
@@ -82,7 +86,10 @@ public class Player extends Entity {
             direction = "right";
             moving = true;
         }
-        physicsUpdate();
+
+        if(isFalling) {
+            physicsUpdate();
+        }
 
         if(keyH.pPressed == true){
             if (parachute != null && !parachute.isDeployed()){
@@ -213,6 +220,10 @@ public class Player extends Entity {
         else {
             return this.playerFrontalArea;
         }
+    }
+
+    public boolean isFalling() {
+        return isFalling;
     }
 
     public void physicsUpdate() {

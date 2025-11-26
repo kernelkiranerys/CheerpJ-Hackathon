@@ -26,21 +26,26 @@ public class EquationManager {
     }
 
     public double updateVelocity() {
-        double weight = player.getPlayerWeight();
-        double dragCoefficient = player.getPlayerDragCoefficient();
-        double frontalArea = player.getPlayerFrontalArea();
-        double airDensity = 1.225;
+        if(player.isFalling()) {
+            double weight = player.getPlayerWeight();
+            double dragCoefficient = player.getPlayerDragCoefficient();
+            double frontalArea = player.getPlayerFrontalArea();
+            double airDensity = 1.225;
 
-        double dragForce = 0.5 * airDensity * velocity * velocity * dragCoefficient * frontalArea;
+            double dragForce = 0.5 * airDensity * velocity * velocity * dragCoefficient * frontalArea;
 
-        double acceleration = gravity - (dragForce / weight);
+            double acceleration = gravity - (dragForce / weight);
 
-        velocity += acceleration * deltaTime;
+            velocity += acceleration * deltaTime;
 
-        double TerminalVelocity = getTerminalVelocity();
-        if (velocity > TerminalVelocity) {
-            velocity = TerminalVelocity;
+            double TerminalVelocity = getTerminalVelocity();
+            if (velocity > TerminalVelocity) {
+                velocity = TerminalVelocity;
+            }
+            return velocity;
         }
-        return  velocity;
+        else {
+            return 0;
+        }
     }
 }
